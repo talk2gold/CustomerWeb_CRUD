@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Customer.Web.ViewModel.CustomerVM;
+<div class="card borderborder-0 p-4">
+    <div class="card-header bg-success ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Create Customer</h1>
+            </div>
+        </div>
+    </div>
+    <div class="card-body ml-0 p-4">
+        <form method="post" class="row">
+            <div class="p-3">
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="FirstName" class="form-control border shardow" />
+                    <label asp-for="FirstName" class="ms-2">First Name</label>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    
+</div>

@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Customer.Web.ViewModel.CustomerVM>
+
+<div class="w-100 card border-8 p-2"> 
+    <div class="card-header bg-success bg-gradient">
+        <div class="row">
+            <div class="col-12 text-center">
+            <h1>Customer List</h1>
+            </div>
+        </div>
+    </div>
+    <div class="card-body border py-2">
+        <div class="row p-3">
+            <div class="col-6 offset-6 text-end">
+                <a asp-controller="Customer" asp-action="CreateCustomer" class="btn btn-primary"> 
+                <i class="bi bi-plus-circle-fill"> Customer</i>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                </tr>            
+            </thead>
+            <tbody>
+                @foreach(var v in Model)
+                {
+                    <tr>
+                        <td>(@v.Id) @v.FirstName</td>
+                        <td>@v.LastName</td>
+                        <td>@v.PhoneNr</td>
+                        <td>@v.Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
